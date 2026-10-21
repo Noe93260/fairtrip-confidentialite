@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FairTrip — Politique de confidentialité</title>
+  <meta name="description" content="Ce que fait FairTrip de tes informations : presque tout reste sur ton téléphone.">
+  <style>
+    :root {
+      --sable: #F6F1E8;
+      --blanc: #FFFFFF;
+      --graphite: #20242B;
+      --texte: #3D434D;
+      --gris: #646B76;
+      --ligne: #ECE8E2;
+      --corail: #F58B57;
+      --corail-fonce: #D9662F;
+      --corail-pale: #FDE6DA;
+      --nuit: #21405F;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--sable);
+      color: var(--texte);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-text-size-adjust: 100%;
+    }
+    main { max-width: 680px; margin: 0 auto; padding: 40px 16px 56px; }
+    .marque { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--graphite); }
+    .pastille { width: 28px; height: 28px; border-radius: 8px; background: var(--corail); color: var(--blanc);
+      display: inline-flex; align-items: center; justify-content: center; font-size: 15px; }
+    h1 { font-size: 30px; line-height: 1.2; letter-spacing: -0.02em; color: var(--graphite); margin: 20px 0 6px; }
+    .maj { color: var(--gris); font-size: 14px; margin: 0 0 24px; }
+    h2 { font-size: 19px; color: var(--graphite); margin: 0 0 8px; }
+    .carte { background: var(--blanc); border-radius: 18px; padding: 20px; margin: 0 0 14px;
+      box-shadow: 0 1px 2px rgba(32, 36, 43, 0.06), 0 4px 16px rgba(32, 36, 43, 0.05); }
+    .bref { background: var(--corail-pale); box-shadow: none; }
+    .bref ul { margin: 0; padding-left: 20px; }
+    p { margin: 0 0 10px; }
+    p:last-child, ul:last-child { margin-bottom: 0; }
+    ul { margin: 0 0 10px; padding-left: 20px; }
+    li { margin: 4px 0; }
+    strong { color: var(--graphite); }
+    a { color: var(--corail-fonce); }
+    footer { color: var(--gris); font-size: 14px; text-align: center; margin-top: 28px; }
+  </style>
+</head>
+<body>
+<main>
+  <span class="marque"><span class="pastille">✈</span>FairTrip</span>
+  <h1>Politique de confidentialité</h1>
+  <p class="maj">Dernière mise à jour : 21 octobre 2026</p>
+
+  <section class="carte bref">
+    <h2>En bref</h2>
+    <ul>
+      <li>Tes voyages, dépenses, sondages et ton profil restent <strong>sur ton téléphone</strong>.</li>
+      <li>Seules les informations utiles à l'IA quittent ton téléphone, quand tu lui demandes de créer un voyage.</li>
+      <li><strong>Pas de compte, pas de publicité, pas de pistage.</strong></li>
+    </ul>
+  </section>
+
+  <section class="carte">
+    <h2>Ce qui reste sur ton téléphone</h2>
+    <p>Tout ce que tu crées dans FairTrip est enregistré uniquement sur ton téléphone : tes voyages et leurs étapes,
+      les participants que tu ajoutes, les dépenses, les sondages, les disponibilités, les tâches, ton profil
+      (prénom, nom, ville, petite bio), tes réponses aux questions du début et tes réglages.</p>
+    <p>Nous n'y avons pas accès. Si tu supprimes l'app, tout cela est effacé avec elle.</p>
+  </section>
+
+  <section class="carte">
+    <h2>Ce qui est envoyé à l'IA</h2>
+    <p>Quand tu demandes à FairTrip de créer ou de compléter un voyage, l'app envoie seulement ce qu'il faut pour
+      préparer l'itinéraire :</p>
+    <ul>
+      <li>la destination ;</li>
+      <li>les dates ou la durée du voyage ;</li>
+      <li>le nombre de voyageurs ;</li>
+      <li>tes envies (plage, culture, gastronomie…) ;</li>
+      <li>ton point de départ, si tu l'as donné ;</li>
+      <li>le texte que tu as écrit pour préciser tes attentes, s'il y en a un.</li>
+    </ul>
+    <p>Ces informations passent par notre relais, hébergé chez <strong>Supabase</strong>, qui les transmet à
+      <strong>OpenRouter</strong>. OpenRouter les confie au modèle d'IA qui rédige l'itinéraire, puis la réponse
+      revient sur ton téléphone. Notre relais n'enregistre ni ta demande ni la réponse.</p>
+    <p>Aucun nom, aucune adresse e-mail, aucun participant ni aucune dépense n'est envoyé.</p>
+  </section>
+
+  <section class="carte">
+    <h2>Un identifiant anonyme</h2>
+    <p>La première fois que tu utilises l'IA, ton téléphone reçoit un identifiant anonyme, tiré au hasard. Il ne
+      contient rien sur toi et ne permet pas de te retrouver.</p>
+    <p>Il sert à une seule chose : compter combien de demandes ton téléphone a faites à l'IA aujourd'hui, pour
+      limiter leur nombre par jour. Seul ce nombre de demandes par jour est enregistré avec lui.</p>
+  </section>
+
+  <section class="carte">
+    <h2>Notifications</h2>
+    <p>Les rappels, comme celui de fin d'essai, sont programmés par ton téléphone lui-même : aucun serveur ne les
+      envoie. Tu peux tous les couper dans le menu profil de l'app.</p>
+  </section>
+
+  <section class="carte">
+    <h2>Ce que FairTrip ne fait pas</h2>
+    <ul>
+      <li>Pas de compte à créer.</li>
+      <li>Pas de publicité.</li>
+      <li>Pas de pistage, ni d'outil de mesure d'audience.</li>
+      <li>Aucune vente ni aucun partage de tes informations avec d'autres entreprises que celles citées plus haut.</li>
+    </ul>
+  </section>
+
+  <section class="carte">
+    <h2>Tes droits et nous contacter</h2>
+    <p>Comme presque tout reste sur ton téléphone, tu gardes la main : supprimer un voyage ou l'app efface les
+      informations correspondantes.</p>
+    <p>Pour toute question sur tes informations, ou pour exercer tes droits (accès, rectification, effacement),
+      écris-nous à <a href="mailto:fairtripcontact@gmail.com">fairtripcontact@gmail.com</a>.</p>
+  </section>
+
+  <footer>FairTrip</footer>
+</main>
+</body>
+</html>
