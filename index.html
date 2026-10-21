@@ -56,7 +56,8 @@
     <h2>En bref</h2>
     <ul>
       <li>Tes voyages, dépenses, sondages et ton profil restent <strong>sur ton téléphone</strong>.</li>
-      <li>Seules les informations utiles à l'IA quittent ton téléphone, quand tu lui demandes de créer un voyage.</li>
+      <li>Seules les informations utiles à l'IA quittent ton téléphone, quand tu lui demandes de créer un voyage,
+        ainsi que le nom des lieux de tes voyages, pour leur trouver une photo.</li>
       <li><strong>Pas de compte, pas de publicité, pas de pistage.</strong></li>
     </ul>
   </section>
@@ -79,8 +80,16 @@
       <li>le nombre de voyageurs ;</li>
       <li>tes envies (plage, culture, gastronomie…) ;</li>
       <li>ton point de départ, si tu l'as donné ;</li>
-      <li>le texte que tu as écrit pour préciser tes attentes, s'il y en a un.</li>
+      <li>le texte que tu as écrit pour préciser tes attentes, s'il y en a un ;</li>
+      <li>le lieu que tu cherches avec « Rechercher un lieu », avec la destination du voyage ;</li>
+      <li>quand tu demandes des suggestions à l'IA (activités, étape, trajet) : les noms des étapes du voyage, leurs
+        nuits et les titres des activités déjà prévues, pour éviter les doublons ;</li>
+      <li>avec « Importer depuis TikTok » : le lien de la vidéo que tu colles et la destination du voyage. Notre relais
+        lit lui-même la description publique de la vidéo sur TikTok et n'en transmet que le texte à l'IA ; la vidéo
+        n'est ni regardée ni enregistrée.</li>
     </ul>
+    <p>Quand tu ajoutes une étape, son nom et le pays du voyage sont cherchés sur le service de cartes de ton
+      téléphone (Plans d'Apple sur iPhone) pour la placer sur la carte ; rien d'autre n'est envoyé.</p>
     <p>Ces informations passent par notre relais, hébergé chez <strong>Supabase</strong>, qui les transmet à
       <strong>OpenRouter</strong>. OpenRouter les confie au modèle d'IA qui rédige l'itinéraire, puis la réponse
       revient sur ton téléphone. Notre relais n'enregistre ni ta demande ni la réponse.</p>
@@ -88,11 +97,22 @@
   </section>
 
   <section class="carte">
+    <h2>Les photos des lieux</h2>
+    <p>Pour illustrer tes voyages, l'app cherche une photo de chaque destination, étape et activité. Elle envoie
+      seulement le nom du lieu (par exemple « Méribel, France » ou « Cime Caron, Val Thorens ») à notre relais, hébergé
+      chez <strong>Supabase</strong>, qui demande la photo à <strong>Unsplash</strong>, une banque de photos libres.
+      Notre relais garde la photo trouvée pour ce nom de lieu, afin de ne pas la redemander ; rien ne la relie à toi.</p>
+    <p>Les photos s'affichent ensuite depuis les serveurs d'Unsplash : comme pour toute image chargée sur internet,
+      Unsplash voit alors l'adresse internet de ton téléphone. Chaque photo indique son photographe, avec un lien vers
+      sa page sur Unsplash.</p>
+  </section>
+
+  <section class="carte">
     <h2>Un identifiant anonyme</h2>
-    <p>La première fois que tu utilises l'IA, ton téléphone reçoit un identifiant anonyme, tiré au hasard. Il ne
+    <p>La première fois que tu utilises l'IA ou que l'app cherche une photo, ton téléphone reçoit un identifiant anonyme, tiré au hasard. Il ne
       contient rien sur toi et ne permet pas de te retrouver.</p>
-    <p>Il sert à une seule chose : compter combien de demandes ton téléphone a faites à l'IA aujourd'hui, pour
-      limiter leur nombre par jour. Seul ce nombre de demandes par jour est enregistré avec lui.</p>
+    <p>Il sert à une seule chose : compter combien de demandes ton téléphone a faites aujourd'hui à l'IA et
+      au service de photos, pour limiter leur nombre par jour. Seul ce nombre de demandes par jour est enregistré avec lui.</p>
   </section>
 
   <section class="carte">
