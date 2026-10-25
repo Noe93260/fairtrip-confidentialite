@@ -42,7 +42,10 @@
     ul { margin: 0 0 10px; padding-left: 20px; }
     li { margin: 4px 0; }
     strong { color: var(--graphite); }
-    a { color: var(--corail-fonce); }
+    a { color: var(--corail-fonce); overflow-wrap: anywhere; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 0 0 10px; }
+    th, td { text-align: left; vertical-align: top; padding: 8px 6px; border-top: 1px solid var(--ligne); }
+    th { color: var(--graphite); font-weight: 600; }
     footer { color: var(--gris); font-size: 14px; text-align: center; margin-top: 28px; }
   </style>
 </head>
@@ -50,50 +53,63 @@
 <main>
   <span class="marque"><span class="pastille">✈</span>FairTrip</span>
   <h1>Politique de confidentialité</h1>
-  <p class="maj">Dernière mise à jour : 21 octobre 2026</p>
+  <p class="maj">Dernière mise à jour : 25 octobre 2026</p>
 
   <section class="carte bref">
     <h2>En bref</h2>
     <ul>
       <li>Tes voyages, dépenses, sondages et ton profil restent <strong>sur ton téléphone</strong>.</li>
-      <li>Seules les informations utiles à l'IA quittent ton téléphone, quand tu lui demandes de créer un voyage,
-        ainsi que le nom des lieux de tes voyages, pour leur trouver une photo.</li>
+      <li>Quittent ton téléphone : ce qu'il faut à l'IA quand tu lui demandes quelque chose, le nom des lieux pour
+        leur trouver une photo et, si tu t'abonnes à FairTrip Pro, ce qu'il faut pour gérer ton abonnement.</li>
       <li><strong>Pas de compte, pas de publicité, pas de pistage.</strong></li>
     </ul>
   </section>
 
   <section class="carte">
+    <h2>Qui est responsable</h2>
+    <p>L'application FairTrip est éditée par <strong>Noé Arnaud</strong>, responsable des informations
+      décrites sur cette page.</p>
+    <p>Contact : <a href="mailto:fairtripcontact@gmail.com">fairtripcontact@gmail.com</a>.</p>
+  </section>
+
+  <section class="carte">
     <h2>Ce qui reste sur ton téléphone</h2>
-    <p>Tout ce que tu crées dans FairTrip est enregistré uniquement sur ton téléphone : tes voyages et leurs étapes,
-      les participants que tu ajoutes, les dépenses, les sondages, les disponibilités, les tâches, ton profil
-      (prénom, nom, ville, petite bio), tes réponses aux questions du début et tes réglages.</p>
+    <p>Tout ce que tu crées dans FairTrip est enregistré uniquement sur ton téléphone : tes voyages, leurs étapes et
+      leurs activités, les participants que tu ajoutes, les dépenses, les sondages, les disponibilités, les tâches,
+      les réservations et les liens que tu colles, ton profil (prénom, nom, ville, petite bio), tes réponses aux
+      questions du début et tes réglages.</p>
     <p>Nous n'y avons pas accès. Si tu supprimes l'app, tout cela est effacé avec elle.</p>
   </section>
 
   <section class="carte">
     <h2>Ce qui est envoyé à l'IA</h2>
     <p>Quand tu demandes à FairTrip de créer ou de compléter un voyage, l'app envoie seulement ce qu'il faut pour
-      préparer l'itinéraire :</p>
+      répondre :</p>
     <ul>
-      <li>la destination ;</li>
-      <li>les dates ou la durée du voyage ;</li>
-      <li>le nombre de voyageurs ;</li>
-      <li>tes envies (plage, culture, gastronomie…) ;</li>
-      <li>ton point de départ, si tu l'as donné ;</li>
-      <li>le texte que tu as écrit pour préciser tes attentes, s'il y en a un ;</li>
-      <li>le lieu que tu cherches avec « Rechercher un lieu », avec la destination du voyage ;</li>
-      <li>quand tu demandes des suggestions à l'IA (activités, étape, trajet) : les noms des étapes du voyage, leurs
-        nuits et les titres des activités déjà prévues, pour éviter les doublons ;</li>
+      <li>pour créer un voyage : la destination, les dates ou la durée, le nombre de voyageurs, tes envies (plage,
+        culture, gastronomie…), ton point de départ si tu l'as donné, et le texte que tu as écrit pour préciser tes
+        attentes, s'il y en a un ;</li>
+      <li>avec « Rechercher un lieu » : le lieu que tu cherches, avec la destination du voyage ;</li>
+      <li>quand tu demandes des suggestions (activités, étape, trajet) : les noms des étapes du voyage, leurs nuits et
+        les titres des activités déjà prévues, pour éviter les doublons ;</li>
+      <li>avec « Coller un lien » (pour une réservation) : le lien que tu colles et la sorte de réservation (trajet,
+        logement ou activité). Notre relais ouvre lui-même cette page web publique, n'en garde que le titre, le
+        résumé, les prix affichés et le début du texte, et transmet seulement cela à l'IA ;</li>
       <li>avec « Importer depuis TikTok » : le lien de la vidéo que tu colles et la destination du voyage. Notre relais
         lit lui-même la description publique de la vidéo sur TikTok et n'en transmet que le texte à l'IA ; la vidéo
         n'est ni regardée ni enregistrée.</li>
     </ul>
-    <p>Quand tu ajoutes une étape, son nom et le pays du voyage sont cherchés sur le service de cartes de ton
-      téléphone (Plans d'Apple sur iPhone) pour la placer sur la carte ; rien d'autre n'est envoyé.</p>
     <p>Ces informations passent par notre relais, hébergé chez <strong>Supabase</strong>, qui les transmet à
-      <strong>OpenRouter</strong>. OpenRouter les confie au modèle d'IA qui rédige l'itinéraire, puis la réponse
+      <strong>OpenRouter</strong>. OpenRouter les confie au modèle d'IA qui rédige la réponse, puis la réponse
       revient sur ton téléphone. Notre relais n'enregistre ni ta demande ni la réponse.</p>
     <p>Aucun nom, aucune adresse e-mail, aucun participant ni aucune dépense n'est envoyé.</p>
+  </section>
+
+  <section class="carte">
+    <h2>Les cartes</h2>
+    <p>Quand tu ajoutes une étape, son nom et le pays du voyage sont cherchés sur le service de cartes de ton
+      téléphone (Plans d'Apple sur iPhone) pour la placer sur la carte ; rien d'autre n'est envoyé. FairTrip ne
+      demande pas ta position.</p>
   </section>
 
   <section class="carte">
@@ -109,16 +125,82 @@
 
   <section class="carte">
     <h2>Un identifiant anonyme</h2>
-    <p>La première fois que tu utilises l'IA ou que l'app cherche une photo, ton téléphone reçoit un identifiant anonyme, tiré au hasard. Il ne
-      contient rien sur toi et ne permet pas de te retrouver.</p>
-    <p>Il sert à une seule chose : compter combien de demandes ton téléphone a faites aujourd'hui à l'IA et
-      au service de photos, pour limiter leur nombre par jour. Seul ce nombre de demandes par jour est enregistré avec lui.</p>
+    <p>La première fois que tu utilises l'IA ou que l'app cherche une photo, ton téléphone reçoit de Supabase un
+      identifiant anonyme, tiré au hasard. Il ne contient rien sur toi et ne permet pas de te retrouver.</p>
+    <p>Il sert à une seule chose : compter combien de demandes ton téléphone a faites chaque jour à l'IA et au service
+      de photos, pour limiter leur nombre par jour. Seul ce nombre de demandes par jour est enregistré avec lui.</p>
   </section>
 
   <section class="carte">
-    <h2>Notifications</h2>
+    <h2>L'abonnement FairTrip Pro</h2>
+    <p>Le paiement se fait entièrement chez <strong>Apple</strong>, avec ton identifiant Apple et le moyen de paiement
+      que tu y as enregistré. FairTrip ne voit jamais ta carte bancaire, ni ton nom ou ton adresse e-mail Apple. Tu
+      gères ou arrêtes ton abonnement dans les réglages de ton iPhone.</p>
+    <p>Pour savoir si tu es abonné, l'app utilise <strong>RevenueCat</strong>, un service spécialisé dans les
+      abonnements. RevenueCat reçoit d'Apple et de l'app ce qu'il faut pour cela : un identifiant anonyme créé par
+      RevenueCat (sans lien avec celui de Supabase), le produit acheté, ses dates d'achat, d'essai, de renouvellement
+      ou de fin, son prix et sa devise, et des informations techniques sur l'app et le téléphone (version de l'app et
+      d'iOS, langue, pays de la boutique). Ces informations servent uniquement à activer FairTrip Pro et à le garder
+      actif.</p>
+    <p>Si tu ne t'abonnes pas, l'app demande seulement à RevenueCat les offres et leurs prix à afficher.</p>
+  </section>
+
+  <section class="carte">
+    <h2>Liens vers d'autres sites</h2>
+    <p>Certains boutons ouvrent un autre site ou une autre app : la recherche d'un logement sur
+      <strong>Booking.com</strong> ou <strong>Airbnb</strong> (le lieu, les dates et le nombre de voyageurs de
+      l'étape sont alors placés dans le lien), une adresse dans Plans, les liens que tu as collés, ou la page d'un
+      photographe sur Unsplash. Rien n'est envoyé tant que tu ne touches pas le bouton. Une fois sur ces sites, c'est
+      leur propre politique de confidentialité qui s'applique. FairTrip ne touche aucune commission sur ces liens.</p>
+  </section>
+
+  <section class="carte">
+    <h2>Notifications et avis</h2>
     <p>Les rappels, comme celui de fin d'essai, sont programmés par ton téléphone lui-même : aucun serveur ne les
       envoie. Tu peux tous les couper dans le menu profil de l'app.</p>
+    <p>Si l'app te propose de la noter, c'est la fenêtre d'Apple qui s'affiche : ta note va directement à Apple.</p>
+  </section>
+
+  <section class="carte">
+    <h2>Les services utilisés</h2>
+    <table>
+      <tr><th>Service</th><th>À quoi il sert</th></tr>
+      <tr><td><a href="https://supabase.com/privacy">Supabase</a></td><td>Héberge notre relais, l'identifiant anonyme,
+        les compteurs de demandes et les photos déjà trouvées.</td></tr>
+      <tr><td><a href="https://openrouter.ai/privacy">OpenRouter</a></td><td>Transmet les demandes au modèle d'IA qui
+        rédige les réponses.</td></tr>
+      <tr><td><a href="https://unsplash.com/privacy">Unsplash</a></td><td>Fournit et affiche les photos des lieux.</td></tr>
+      <tr><td><a href="https://www.tiktok.com/legal/privacy-policy">TikTok</a></td><td>Notre relais y lit la description
+        publique d'une vidéo, seulement si tu en importes une.</td></tr>
+      <tr><td><a href="https://www.revenuecat.com/privacy">RevenueCat</a></td><td>Gère le statut de l'abonnement
+        FairTrip Pro.</td></tr>
+      <tr><td><a href="https://www.apple.com/fr/legal/privacy/">Apple</a></td><td>Paiement de l'abonnement, cartes
+        (Plans), notifications et demande d'avis.</td></tr>
+    </table>
+    <p>Certains de ces services sont situés hors de l'Union européenne, notamment aux États-Unis. Ils traitent ces
+      informations selon leurs propres règles, consultables par les liens ci-dessus.</p>
+  </section>
+
+  <section class="carte">
+    <h2>Combien de temps c'est gardé</h2>
+    <ul>
+      <li><strong>Sur ton téléphone</strong> : jusqu'à ce que tu supprimes le voyage, l'élément concerné ou l'app.</li>
+      <li><strong>Demandes à l'IA</strong> : notre relais ne les enregistre pas. OpenRouter et le modèle d'IA peuvent
+        les garder selon leurs propres règles.</li>
+      <li><strong>Identifiant anonyme et compteurs de demandes par jour</strong> : gardés chez Supabase, sans
+        effacement automatique pour l'instant. Si tu supprimes l'app, ton téléphone recevra un nouvel identifiant et
+        l'ancien ne servira plus.</li>
+      <li><strong>Photos déjà trouvées</strong> : gardées pour chaque nom de lieu, sans lien avec toi.</li>
+      <li><strong>Abonnement</strong> : RevenueCat et Apple gardent l'historique de tes achats selon leurs propres
+        règles, notamment pour leurs obligations comptables.</li>
+    </ul>
+  </section>
+
+  <section class="carte">
+    <h2>Pourquoi nous utilisons ces informations</h2>
+    <p>Uniquement pour faire fonctionner ce que tu demandes à l'app : créer et compléter tes voyages, afficher les
+      photos, limiter le nombre de demandes par jour et activer l'abonnement que tu as choisi. C'est la base de leur
+      utilisation : l'exécution du service que tu utilises.</p>
   </section>
 
   <section class="carte">
@@ -127,6 +209,7 @@
       <li>Pas de compte à créer.</li>
       <li>Pas de publicité.</li>
       <li>Pas de pistage, ni d'outil de mesure d'audience.</li>
+      <li>Pas d'accès à ta position, tes contacts ou tes photos.</li>
       <li>Aucune vente ni aucun partage de tes informations avec d'autres entreprises que celles citées plus haut.</li>
     </ul>
   </section>
@@ -135,8 +218,13 @@
     <h2>Tes droits et nous contacter</h2>
     <p>Comme presque tout reste sur ton téléphone, tu gardes la main : supprimer un voyage ou l'app efface les
       informations correspondantes.</p>
-    <p>Pour toute question sur tes informations, ou pour exercer tes droits (accès, rectification, effacement),
-      écris-nous à <a href="mailto:fairtripcontact@gmail.com">fairtripcontact@gmail.com</a>.</p>
+    <p>Tu as le droit d'accéder à tes informations, de les corriger, de les faire effacer, de t'opposer à leur
+      utilisation ou d'en limiter l'usage. Pour cela, ou pour toute question, écris-nous à
+      <a href="mailto:fairtripcontact@gmail.com">fairtripcontact@gmail.com</a>. L'identifiant anonyme ne contenant rien
+      sur toi, nous ne pouvons pas le retrouver à partir de ton nom ou de ton e-mail.</p>
+    <p>Si tu estimes que tes droits ne sont pas respectés, tu peux t'adresser à la CNIL
+      (<a href="https://www.cnil.fr">cnil.fr</a>).</p>
+    <p>Si FairTrip change ce qu'elle fait de tes informations, cette page sera mise à jour et sa date changera.</p>
   </section>
 
   <footer>FairTrip</footer>
